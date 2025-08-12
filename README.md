@@ -2,10 +2,6 @@
 Rent anything , anywhere , anytime u want
 Walkthrough: https://drive.google.com/file/d/1i3OhVMXbZEQhX4Bql1_IQHSlzH4nXhnQ/view?usp=sharing
 
-
-##  Live Demo
-Try it yourself: [rent-n-run.vercel.app](https://rent-n-run.vercel.app) :contentReference[oaicite:0]{index=0}
-
 ##  About
 RentNRun is a modern web app built with **Next.js** (JavaScript + Tailwind CSS) offering a seamless platform to rent items—any time and anywhere.  
 Contributors: Krish Patel, Tirth Patel, Tisha Soni, Selin Parmar :contentReference[oaicite:1]{index=1}
