@@ -6,20 +6,6 @@ Walkthrough: https://drive.google.com/file/d/1i3OhVMXbZEQhX4Bql1_IQHSlzH4nXhnQ/v
 ##  Live Demo
 Try it yourself: [rent-n-run.vercel.app](https://rent-n-run.vercel.app) :contentReference[oaicite:0]{index=0}
 
----
-
-##  Table of Contents
-- [About](#about)  
-- [Features](#features)  
-- [Tech Stack](#tech-stack)  
-- [Screenshots & Diagrams](#screenshots--diagrams)  
-- [Installation & Setup](#installation--setup)  
-- [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)  
-
----
-
 ##  About
 RentNRun is a modern web app built with **Next.js** (JavaScript + Tailwind CSS) offering a seamless platform to rent items—any time and anywhere.  
 Contributors: Krish Patel, Tirth Patel, Tisha Soni, Selin Parmar :contentReference[oaicite:1]{index=1}
@@ -36,18 +22,18 @@ Contributors: Krish Patel, Tirth Patel, Tisha Soni, Selin Parmar :contentReferen
 | Hosting      | Vercel (deployed live) |
 | Other Tools  | (Add your testing, linting, or deployment tools as needed) |
 
-##  Screenshots & Diagrams
-<!-- Replace placeholders with your uploaded image URLs -->
+## 👥 Contributors
 
-### App Screenshots
-| Description       | Preview |
-|-------------------|---------|
-| Home / Browse Page | ![Browse Page](path/to/browse.png) |
-| Item Detail Page  | ![Item Details](path/to/item.png) |
+We’re grateful to the amazing people who brought RentNRun to life:
 
-### Architecture Diagram
-```text
-[ User ] → [ Next.js Frontend ] → [ API Layer / Database ]
+| Name | Role | GitHub |
+|------|------|--------|
+| **Tirth Patel** | Lead Developer & Project Architect | [@tirthpatel2543](https://github.com/tirthpatel2543) |
+| **Krish Patel** | Frontend Developer & UI Designer | [@krishpatel](https://github.com/) |
+| **Selin Parmar** | Support & Quality Assurance | [@selinparmar](https://github.com/) |
+| **Tisha Soni** | Support & Documentation | [@tishasoni](https://github.com/) |
+
+
 
 
  
