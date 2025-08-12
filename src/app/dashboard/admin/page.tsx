@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Search, ChevronsLeft, ChevronsRight } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { QuotationDialog } from '@/components/quotation-dialog';
+import { useSidebar } from '@/components/ui/sidebar';
 
 interface Order {
     id: string;
@@ -60,10 +61,15 @@ const invoiceStatuses = [
 
 
 export default function RentalOrdersPage() {
-    const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
+    const { isMobile } = useSidebar();
+    const [isSidebarCollapsed, setSidebarCollapsed] = useState(isMobile);
     const [activeFilter, setActiveFilter] = useState('ALL');
     const [searchQuery, setSearchQuery] = useState('');
     const [isQuotationDialogOpen, setIsQuotationDialogOpen] = useState(false);
+
+     useEffect(() => {
+        setSidebarCollapsed(isMobile);
+    }, [isMobile]);
 
     const rentalStatusLabels = rentalStatuses.map(s => s.label);
     const invoiceStatusLabels = invoiceStatuses.map(s => s.label);
@@ -87,7 +93,8 @@ export default function RentalOrdersPage() {
             {/* Collapsible Sidebar */}
             <div className={cn(
                 "transition-all duration-300 ease-in-out bg-card text-card-foreground border-r",
-                isSidebarCollapsed ? "w-0 p-0 overflow-hidden" : "w-64 p-4"
+                isSidebarCollapsed ? "w-0 p-0 overflow-hidden" : "w-64 p-4",
+                isMobile && "absolute top-0 left-0 h-full z-10"
             )}>
                 <div className="flex flex-col h-full">
                     <h3 className="font-semibold text-lg mb-4">RENTAL STATUS</h3>

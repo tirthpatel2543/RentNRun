@@ -5,9 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Zap, Search, Handshake, Smile } from 'lucide-react';
+import { Zap, Search, Handshake, Smile, Menu } from 'lucide-react';
 import { products } from '@/lib/data';
 import { useState, useEffect } from 'react';
+import { AnimatedBorderButton } from '@/components/ui/animated-border-button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const AnimatedText = () => {
   const [text, setText] = useState('');
@@ -51,39 +53,71 @@ const AnimatedText = () => {
   );
 };
 
+const GitHubIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" {...props}>
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+    </svg>
+);
+
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="flex flex-col min-h-screen bg-background text-foreground dark">
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex items-center justify-between h-14">
           <Link href="/" className="flex items-center gap-2">
             <Zap className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold text-primary">Rent N Run</span>
           </Link>
-          <nav className="items-center hidden gap-6 text-sm font-medium md:flex">
+          <nav className="items-center hidden gap-8 text-sm font-medium md:flex">
             <Link
               href="#products"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              className="nav-link-scribble"
             >
               Products
             </Link>
             <Link
               href="#how-it-works"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              className="nav-link-scribble"
             >
               How It Works
             </Link>
              <Link
               href="#pricing"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              className="nav-link-scribble"
             >
               Pricing
             </Link>
           </nav>
-          <Link href="/login">
-            <Button>Login</Button>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link href="/login" className="hidden md:block">
+              <Button>Login</Button>
+            </Link>
+             <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="icon" className="md:hidden">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right">
+                  <div className="grid gap-6 text-lg font-medium p-6">
+                    <Link href="#products" className="hover:text-primary">
+                      Products
+                    </Link>
+                    <Link href="#how-it-works" className="hover:text-primary">
+                      How It Works
+                    </Link>
+                    <Link href="#pricing" className="hover:text-primary">
+                      Pricing
+                    </Link>
+                    <Link href="/login" className="hover:text-primary">
+                      Login
+                    </Link>
+                  </div>
+                </SheetContent>
+              </Sheet>
+          </div>
         </div>
       </header>
 
@@ -98,9 +132,9 @@ export default function LandingPage() {
               The seamless way to rent gear for your next adventure, project, or event. High-quality items, delivered to your doorstep.
             </p>
             <div className="mt-8">
-              <Link href="/login">
-                <Button size="lg">Get Started</Button>
-              </Link>
+                <AnimatedBorderButton href="/login">
+                  Get Started
+                </AnimatedBorderButton>
             </div>
           </div>
         </section>
@@ -111,7 +145,7 @@ export default function LandingPage() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {products.slice(0, 3).map((product) => (
                 <Link key={product.id} href="/login">
-                  <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+                  <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 bg-secondary border-border/60 hover:border-primary/50">
                     <CardContent className="p-0">
                       <Image
                         src={product.imageUrl}
@@ -170,19 +204,39 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="py-6 border-t">
-        <div className="container flex flex-col items-center justify-between gap-4 text-center md:flex-row">
-          <div className="flex items-center gap-2">
-            <Zap className="w-6 h-6 text-primary" />
-            <span className="font-semibold">Rent N Run</span>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Rent N Run. All rights reserved.
-          </p>
-           <div className="flex items-center gap-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link>
-           </div>
+      <footer className="py-8 border-t border-border/40">
+        <div className="container text-center">
+            <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+                <div className="flex items-center gap-2">
+                    <Zap className="w-6 h-6 text-primary" />
+                    <span className="font-semibold">Rent N Run</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                    © {new Date().getFullYear()} Rent N Run. All rights reserved.
+                </p>
+                <div className="flex items-center gap-4">
+                    <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>
+                    <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link>
+                </div>
+            </div>
+            <div className="pt-8 mt-8 border-t border-border/40">
+                <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
+                    <div className="flex items-center gap-3">
+                        <Image src="https://placehold.co/40x40.png" alt="Tirth Patel" width={40} height={40} className="rounded-full" data-ai-hint="developer portrait"/>
+                        <h4 className="font-semibold">Tirth Patel</h4>
+                        <a href="https://github.com/tirth-dev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                            <GitHubIcon className="w-5 h-5" />
+                        </a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <Image src="https://placehold.co/40x40.png" alt="Krish Patel" width={40} height={40} className="rounded-full" data-ai-hint="developer portrait"/>
+                        <h4 className="font-semibold">Krish Patel</h4>
+                        <a href="https://github.com/krishpatel2611" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                            <GitHubIcon className="w-5 h-5" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
       </footer>
     </div>

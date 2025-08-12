@@ -76,7 +76,7 @@ export default function CustomerDashboardPage() {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 {categories.map((category) => (
                     <Link href="#" key={category.name}>
-                        <Card className="overflow-hidden transition-shadow duration-300 ease-in-out hover:shadow-xl">
+                        <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-2 bg-secondary border-border/60">
                              <Image
                                 src={category.image}
                                 alt={category.name}
@@ -108,7 +108,7 @@ export default function CustomerDashboardPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredProducts.slice(0, 4).map((product) => (
-              <Card key={product.id} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+              <Card key={product.id} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 bg-secondary border-border/60 hover:border-primary/50">
                 <CardContent className="p-0">
                   <Image
                     src={product.imageUrl}

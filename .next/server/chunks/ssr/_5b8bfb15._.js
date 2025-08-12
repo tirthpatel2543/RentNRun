@@ -254,7 +254,7 @@ const products = [
         dailyRate: 75,
         availability: 'Available',
         stock: 5,
-        imageUrl: 'https://placehold.co/600x400.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754942506/kbo-bike-kXP41LVdcv0-unsplash_n8t7li.jpg'
     },
     {
         id: 'prod-002',
@@ -263,7 +263,7 @@ const products = [
         dailyRate: 120,
         availability: 'Rented',
         stock: 2,
-        imageUrl: 'https://placehold.co/600x400.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754942507/allyson-beaucourt-W6OCE1sGOYw-unsplash_ddc1si.jpg'
     },
     {
         id: 'prod-003',
@@ -272,7 +272,7 @@ const products = [
         dailyRate: 40,
         availability: 'Available',
         stock: 10,
-        imageUrl: 'https://placehold.co/600x400.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754942507/patrick-hendry-VkaihQSqVbI-unsplash_yeztzg.jpg'
     },
     {
         id: 'prod-004',
@@ -281,7 +281,7 @@ const products = [
         dailyRate: 60,
         availability: 'Available',
         stock: 8,
-        imageUrl: 'https://placehold.co/400x300.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754942506/alex-litvin-MAYsdoYpGuk-unsplash_ght5sw.jpg'
     },
     {
         id: 'prod-005',
@@ -290,7 +290,7 @@ const products = [
         dailyRate: 250,
         availability: 'Rented',
         stock: 1,
-        imageUrl: 'https://placehold.co/400x300.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754945348/XDJ-RX3_prm_top_211221_scvcg5.png'
     }
 ];
 const orders = [

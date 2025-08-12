@@ -254,7 +254,7 @@ const products = [
         dailyRate: 75,
         availability: 'Available',
         stock: 5,
-        imageURL: 'https://placehold.co/600x400.png'
+        imageUrl: 'https://placehold.co/600x400.png'
     },
     {
         id: 'prod-002',

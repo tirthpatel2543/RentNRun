@@ -403,7 +403,7 @@ const products = [
         dailyRate: 60,
         availability: 'Available',
         stock: 8,
-        imageUrl: '/images/projector.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754942506/alex-litvin-MAYsdoYpGuk-unsplash_ght5sw.jpg'
     },
     {
         id: 'prod-005',
@@ -412,7 +412,7 @@ const products = [
         dailyRate: 250,
         availability: 'Rented',
         stock: 1,
-        imageUrl: '/images/dj-set.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754945348/XDJ-RX3_prm_top_211221_scvcg5.png'
     }
 ];
 const orders = [

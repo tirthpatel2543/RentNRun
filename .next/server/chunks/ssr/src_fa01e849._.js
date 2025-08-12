@@ -158,7 +158,7 @@ const products = [
         dailyRate: 60,
         availability: 'Available',
         stock: 8,
-        imageUrl: '/images/projector.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754942506/alex-litvin-MAYsdoYpGuk-unsplash_ght5sw.jpg'
     },
     {
         id: 'prod-005',
@@ -167,7 +167,7 @@ const products = [
         dailyRate: 250,
         availability: 'Rented',
         stock: 1,
-        imageUrl: '/images/dj-set.png'
+        imageUrl: 'https://res.cloudinary.com/dmcuryefk/image/upload/v1754945348/XDJ-RX3_prm_top_211221_scvcg5.png'
     }
 ];
 const orders = [
@@ -1140,9 +1140,6 @@ function RentDialog({ open, onOpenChange, product }) {
                                                 mode: "single",
                                                 selected: deliveryDate,
                                                 onSelect: setDeliveryDate,
-                                                disabled: {
-                                                    before: new Date()
-                                                },
                                                 initialFocus: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/rent-dialog.tsx",
@@ -1177,7 +1174,7 @@ function RentDialog({ open, onOpenChange, product }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/rent-dialog.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 144,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1188,13 +1185,13 @@ function RentDialog({ open, onOpenChange, product }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/rent-dialog.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/rent-dialog.tsx",
-                            lineNumber: 144,
+                            lineNumber: 143,
                             columnNumber: 12
                         }, this)
                     ]
@@ -1213,12 +1210,12 @@ function RentDialog({ open, onOpenChange, product }) {
                                 children: "Cancel"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/rent-dialog.tsx",
-                                lineNumber: 151,
+                                lineNumber: 150,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/rent-dialog.tsx",
-                            lineNumber: 150,
+                            lineNumber: 149,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1227,13 +1224,13 @@ function RentDialog({ open, onOpenChange, product }) {
                             children: "Confirm Rental"
                         }, void 0, false, {
                             fileName: "[project]/src/components/rent-dialog.tsx",
-                            lineNumber: 155,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/rent-dialog.tsx",
-                    lineNumber: 149,
+                    lineNumber: 148,
                     columnNumber: 9
                 }, this)
             ]

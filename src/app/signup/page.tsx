@@ -79,12 +79,12 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-background py-12">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background py-12 px-4">
         <Link href="/" className="flex items-center gap-4 mb-8">
             <Zap className="w-12 h-12 text-primary" />
-            <h1 className="text-5xl font-bold font-headline text-primary">Rent N Run</h1>
+            <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">Rent N Run</h1>
         </Link>
-        <Card className="w-[450px]">
+        <Card className="w-full max-w-md">
           <CardHeader>
             <CardTitle>Create or Access Your Account</CardTitle>
             <CardDescription>
@@ -106,7 +106,7 @@ export default function SignupPage() {
                     </span>
                 </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input id="name" type="text" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)} required />
