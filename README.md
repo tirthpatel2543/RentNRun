@@ -2,11 +2,6 @@
 Rent anything , anywhere , anytime u want
 Walkthrough: https://drive.google.com/file/d/1i3OhVMXbZEQhX4Bql1_IQHSlzH4nXhnQ/view?usp=sharing
 
-# RentNRun
-
-*Rent anything, anywhere, anytime you want.*
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=rent-n-run) <!-- Example badge; update as needed -->
 
 ##  Live Demo
 Try it yourself: [rent-n-run.vercel.app](https://rent-n-run.vercel.app) :contentReference[oaicite:0]{index=0}
