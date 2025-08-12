@@ -29,7 +29,7 @@ We’re grateful to the amazing people who brought RentNRun to life:
 | Name | Role | GitHub |
 |------|------|--------|
 | **Tirth Patel** | Lead Developer & Project Architect | [@tirthpatel2543](https://github.com/tirthpatel2543) |
-| **Krish Patel** | Frontend Developer & UI Designer | [@krishpatel](https://github.com/) |
+| **Krish Patel** | Frontend Developer & UI Designer | [@krishpatel](https://github.com/kodemeister-yt) |
 | **Selin Parmar** | Support & Quality Assurance | [@selinparmar](https://github.com/) |
 | **Tisha Soni** | Support & Documentation | [@tishasoni](https://github.com/) |
 
