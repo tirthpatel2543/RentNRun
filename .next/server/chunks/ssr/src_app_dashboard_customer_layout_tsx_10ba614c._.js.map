@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/dashboard/customer/layout.tsx"],"sourcesContent":["\nexport default function CustomerDashboardLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <div>\n        {children}\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AACe,SAAS,wBAAwB,EAC9C,QAAQ,EAGT;IACC,qBACE,8OAAC;kBACI;;;;;;AAGT","debugId":null}}]
+}
